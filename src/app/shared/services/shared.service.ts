@@ -6,7 +6,8 @@ export class SharedService {
   constructor(private http: HttpClient) {}
   getRecipeById(id: number) {
     const recipeDetails = JSON.parse(localStorage.getItem('recipes'));
-    return recipeDetails.filter(recipe => recipe.id === id.toString()).pop();
+    // return recipeDetails.filter(recipe => recipe.id === id.toString()).pop();
+    return recipeDetails.find(recipe => recipe.id === id.toString())
   }
 
   getRecipes() {

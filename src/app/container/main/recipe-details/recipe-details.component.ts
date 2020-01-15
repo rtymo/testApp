@@ -1,12 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { ActivatedRoute, Router, Params } from "@angular/router";
-import { SharedService } from "src/app/shared";
 import { Recipe } from "../../../shared/models/recipe.interface";
+import { SharedService } from '../../../shared/services';
 
 @Component({
   selector: "app-recipe-details",
   templateUrl: "./recipe-details.component.html",
-  styleUrls: ["./recipe-details.component.css"]
+  styleUrls: ["./recipe-details.component.css"],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RecipeDetailsComponent implements OnInit {
   todoId: string;
