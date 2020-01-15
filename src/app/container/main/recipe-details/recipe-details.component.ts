@@ -28,11 +28,11 @@ export class RecipeDetailsComponent implements OnInit {
     });
   }
 
-  getRecipeDetailById(id) {
+  getRecipeDetailById(id: string) {
     this.todoDetail = this.service.getRecipeById(parseInt(id));
   }
 
-  onClickBack() {
+  onClickBack(): void {
     this.router.navigate(["recipes"]);
   }
 }
