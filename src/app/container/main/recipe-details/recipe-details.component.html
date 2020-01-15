@@ -1,0 +1,11 @@
+<mat-card class="example-card" >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{todoDetail.name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>{{todoDetail.description}}</p>
+  </mat-card-content>
+</mat-card>
+<button mat-raised-button color="primary" (click)="onClickBack()">Back</button>
