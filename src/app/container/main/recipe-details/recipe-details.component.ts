@@ -21,11 +21,7 @@ export class RecipeDetailsComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       this.todoId = params["id"];
-      if (this.todoId !== undefined) {
-        this.getRecipeDetailById(this.todoId);
-      } else {
-        this.todoDetail["id"] = 0;
-      }
+      !!this.todoId ? this.getRecipeDetailById(this.todoId): this.todoDetail["id"] = 0;
     });
   }
 
